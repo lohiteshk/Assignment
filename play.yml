@@ -1,0 +1,12 @@
+---
+-hosts: servername
+   -tasks:
+      environment:
+        - app: nginx
+          path: /etc/ansible
+      become_user: user1
+      shell: create a user
+      command: useradd user1
+      port:
+        - ports: 10022         
+      become: yes
